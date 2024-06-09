@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time IDS</title>
+    <style>
+        body {
+            background-image: url('/static/ids.png');
+            background-size: cover;
+            color: #C0C0C0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            color: #C0C0C0;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            display: inline-block;
+            padding: 40px;
+            box-shadow: 0 0 20px #00BFFF;
+            margin-top: 50px;
+        }
+        label {
+            display: block;
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #00BFFF;
+            border-radius: 5px;
+            background-color: #1C1C1C;
+            color: #C0C0C0;
+        }
+        input[type="submit"] {
+            background-color: #00BFFF;
+            border: none;
+            border-radius: 5px;
+            color: #000000;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real - Time IDS</h1>
+    <div class="form-container">
+        <form action="/detect" method="post" enctype="multipart/form-data">
+            <label for="data_file">Upload CSV file:</label>
+            <input type="file" name="data_file" id="data_file">
+            <label for="real_time_data">Real-Time Data (CSV format):</label>
+            <textarea name="real_time_data" id="real_time_data" rows="10" cols="30"></textarea>
+            <input type="submit" value="DETECT">
+        </form>
+    </div>
+</body>
+</html>
