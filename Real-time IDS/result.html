@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <style>
+        body {
+            background-image: url('/static/ids.png');
+            background-size: cover;
+            color: #C0C0C0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            color: #C0C0C0;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        .result-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            display: inline-block;
+            padding: 40px;
+            box-shadow: 0 0 20px #00BFFF;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            background-color: #00BFFF;
+            color: #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detection Result</h1>
+    <div class="result-container">
+        <p>{{ intrusion_result }}</p>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
